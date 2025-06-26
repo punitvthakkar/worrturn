@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Wortturm</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="stars">
+        <svg width="100%" height="100%" id="starfield"></svg>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="title">DER WORTTURM</h1>
+            <p class="subtitle">Climb Higher • Learn Faster • Compete Harder</p>
+        </header>
+
+        <div class="game-area">
+            <!-- Tower Section -->
+            <div class="tower-section">
+                <div class="stat-card">
+                    <div class="stat-title" data-i18n="currentScoreTitle">Aktueller Score</div>
+                    <div class="score" id="currentScore">0</div>
+                </div>
+                
+                <div class="tower" id="tower">
+                    <!-- Floors will be generated here by JavaScript -->
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-title" data-i18n="personalBestTitle">Persönliche Bestleistung</div>
+                    <div class="score" id="personalBest">0</div>
+                    <div class="personal-best-floor" id="personalBestFloor"></div>
+                </div>
+            </div>
+
+            <!-- Question Section -->
+            <div class="question-area">
+                <div class="progress-info">
+                    <span id="currentFloorDisplay">Etage 1</span> • <span id="difficultyDisplay">Einfach</span> • <span id="questionTypeDisplay">Bedeutung</span>
+                </div>
+                
+                <div class="lifelines">
+                    <button class="lifeline-btn" id="lifeline50" title="50:50">🎯</button>
+                    <button class="lifeline-btn" id="lifelineAudience" title="Publikum">👥</button>
+                    <button class="lifeline-btn" id="lifelineFriend" title="Freund">📞</button>
+                    <button class="lifeline-btn" id="lifelineSkip" title="Tauschen">🔄</button>
+                </div>
+
+                <div class="question-text" id="questionText">
+                    <!-- Question will be loaded here by JavaScript -->
+                </div>
+
+                <div class="answers-grid" id="answersGrid">
+                    <!-- Answers will be loaded here by JavaScript -->
+                </div>
+
+                <div class="game-controls">
+                    <button class="control-btn" id="walkAwayBtn" data-i18n="walkAwayButton">Aussteigen</button>
+                    <button class="control-btn" id="newGameBtn" data-i18n="newGameButton">Neues Spiel</button>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-title" data-i18n="dailyLeaderboardTitle">Heutige Bestenliste</div>
+                    <div class="leaderboard" id="leaderboard">
+                        <!-- Leaderboard items will be loaded here by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-title" data-i18n="badgesTitle">Abzeichen</div>
+                    <div class="badges-display" id="badgesDisplay">
+                        <!-- Badges will be loaded here by JavaScript -->
+                    </div>
+                    <div class="badges-progress" id="badgesProgress">
+                        <!-- Badges progress will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
